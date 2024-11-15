@@ -1,0 +1,6 @@
+@CONSUMIR_API_DTOs_HostAddress = http://localhost:5140
+
+GET {{CONSUMIR_API_DTOs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
