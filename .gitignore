@@ -35,5 +35,5 @@ msbuild.wrn
 
 # archivo de configuracion.
 
-appsetings.Dev.json
+appsettings.Development.json
 appsetings.json
