@@ -8,7 +8,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IPostsService, PostsService>();
+var baseUrlPosts = builder.Configuration["BaseUrlPosts"] ?? throw new InvalidOperationException("Configuracion no encontrada.");
+builder.Services.AddHttpClient<IPostsService, PostsService>(c => 
+{
+    c.BaseAddress = new Uri(baseUrlPosts);
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

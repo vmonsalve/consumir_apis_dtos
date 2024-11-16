@@ -8,16 +8,15 @@ public class PostsService : IPostsService
 {
     private HttpClient _httpClient;
 
-    public PostsService()
+    public PostsService(HttpClient httpClient)
     {
-        _httpClient = new HttpClient();
+        _httpClient = httpClient;
 
     }
 
     public async Task<IEnumerable<PostDto>> Get()
     {
-        var url = "https://jsonplaceholder.typicode.com/posts";
-        var response = await _httpClient.GetAsync(url);
+        var response = await _httpClient.GetAsync(_httpClient.BaseAddress);
         var body = await response.Content.ReadAsByteArrayAsync();
 
         var options = new JsonSerializerOptions{
@@ -26,7 +25,8 @@ public class PostsService : IPostsService
 
         var posts = JsonSerializer.Deserialize<IEnumerable<PostDto>>(body, options);
 
-        return posts;
+        return posts ?? Enumerable.Empty<PostDto>();
+;
     }
 
 }
