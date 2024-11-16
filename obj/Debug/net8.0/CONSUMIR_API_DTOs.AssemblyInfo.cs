@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CONSUMIR_API_DTOs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a23cc48fee621c2ae8bf2cb8fc01e8d47c7999ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40a8f2a865e35ea2325fd2004e2d81da29ed0430")]
 [assembly: System.Reflection.AssemblyProductAttribute("CONSUMIR_API_DTOs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CONSUMIR_API_DTOs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -18,5 +18,5 @@ dotnet watch run --project CONSUMIR_API_DTOs.csproj
 Agregar la url al archivo appsetting.json
 
 ```json 
-"BaseUrlPosts" :"https://jsonplaceholder.typicode.com/posts"
+    "BaseUrlPosts" :"https://jsonplaceholder.typicode.com/posts"
 ```
